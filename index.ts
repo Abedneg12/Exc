@@ -1,4 +1,4 @@
-//exercise
+//exercise PPT GITHUB
 
 // no 1 Write a code to display the multiplication table of a given integer 
 const num1: number = 5;
@@ -70,7 +70,7 @@ console.log(string1.replace(/./g, (char) => {
 );
 
 
-//no 8 Write a code to find the largest of two given integers
+//no 8 Write a code to find the largest of two given integer
 const num2: number = 54;
 const num3: number = 12;
 let shw2: number = 0;
