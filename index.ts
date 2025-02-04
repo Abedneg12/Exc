@@ -86,18 +86,17 @@ console.log(shw2);
 //no 9 Write a conditional statement to sort three numbers
 const shw3: number[] = [5, 27, 15];
 
-for (let i = 0; i < shw3.length; i++) {
-    for (let j = i + 1; j < shw3.length; j++) {
-        if (shw3[i] > shw3[j]) {
-            // Menyimpan nilai shw3[i] sementara
-            let temp = shw3[i];    
-            shw3[i] = shw3[j];     // Memindahkan nilai shw3[j] ke shw3[i]
-            shw3[j] = temp;        // Memindahkan nilai yang ada di temp (nilai awal shw3[i]) ke shw3[j]
-        }
-    }
+if (shw3[0] > shw3[1]) {
+    [shw3[0], shw3[1]] = [shw3[1], shw3[0]];
+}
+else if (shw3[1] > shw3[2]) {
+    [shw3[1], shw3[2]] = [shw3[2], shw3[1]];
+}
+else if (shw3[0] > shw3[1]) {
+    [shw3[0], shw3[1]] = [shw3[1], shw3[0]];
 }
 
-console.log(shw3);
+console.log(shw3); // Output: [5, 15, 27]
 
 
 
