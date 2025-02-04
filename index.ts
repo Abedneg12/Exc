@@ -54,20 +54,36 @@ console.log(show);
 
 
 //no 6 Write a code to capitalize the first letter of each word in a string
-let wrd1: string = "main roblox";
-console.log(wrd1.slice(0,1).toUpperCase() + wrd1.slice(1,5) + wrd1.slice(5,6).toUpperCase() + wrd1.slice(6,11));
+function hurufbesar(input: string): string {
+    const wrd: string[] = input.split(' '); 
+    for (let i = 0; i < wrd.length; i++) {
+        wrd[i] = wrd[i].charAt(0).toUpperCase() + wrd[i].slice(1);
+    }
+    return wrd.join(' '); 
+}
+
+const inputbesar: string = "main roblox bikin goblox";
+const besar: string = hurufbesar(inputbesar);
+console.log(besar);
+
+
 
 //no 7
-let string1: string = "The QuiCk BrOwN Fox";
+function swapcapital(str: string){
+    let res: string = "";
 
-console.log(string1.replace(/./g, (char) => {
-    if (char === char.toUpperCase()) {
-      return char.toLowerCase(); // Jika huruf besar, ubah menjadi huruf kecil
-    } else {
-      return char.toUpperCase(); // Jika huruf kecil, ubah menjadi huruf besar
+    for(let i = 0; i < str.length; i++){
+        if(str[i] === str[i].toUpperCase()){
+           res += str[i].toLowerCase();
+        }else{
+            res += str[i].toUpperCase();
+        }
     }
-  })
-);
+    return res;
+}
+console.log(swapcapital("MAin RoBlox SamPAI PInter"))
+
+
 
 
 //no 8 Write a code to find the largest of two given integer
@@ -84,7 +100,7 @@ console.log(shw2);
 
 
 //no 9 Write a conditional statement to sort three numbers
-const shw3: number[] = [5, 27, 15];
+const shw3: number[] = [0.5, 3535, 15];
 
 if (shw3[0] > shw3[1]) {
     [shw3[0], shw3[1]] = [shw3[1], shw3[0]];
@@ -96,7 +112,7 @@ else if (shw3[0] > shw3[1]) {
     [shw3[0], shw3[1]] = [shw3[1], shw3[0]];
 }
 
-console.log(shw3); // Output: [5, 15, 27]
+console.log(shw3);
 
 
 
@@ -116,9 +132,9 @@ console.log(sh3);
 
 
 //soal 11
-let wrd3: string = "is it just my imagination?";
+let wrd3: string = "An apple a day keeps the doctor away";
 let wrd4: string = "";
 
-wrd4 = wrd3.replace(/a/g, '*');
+wrd4 = wrd3.replace(/a/gi, '*');
 
 console.log(wrd4); 
